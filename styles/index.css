@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200&family=Quicksand&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: "Outfit", "Quicksand", "Georgia", sans-serif;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #111729;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+body main form {
+  margin: 20px;
+  position: relative;
+  display: inline-block;
+  max-width: 70%;
+  width: 80vw;
+}
+@media (max-width: 600px) {
+  body main form {
+    margin: 10% auto;
+    max-width: 100%;
+    width: 100vw;
+  }
+}
+body main form input {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  border: 2px solid #3662e3;
+  color: #f2f5f9;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+body main form input::placeholder {
+  color: #364153;
+}
+body main form input:focus {
+  outline: inherit;
+  box-shadow: rgba(131, 113, 113, 0.24) 0px 3px 8px;
+}
+body main form button {
+  background-color: #3662e3;
+  border-radius: 12px;
+  border: none;
+  color: #f2f5f9;
+  cursor: pointer;
+  margin-right: 1.5px;
+  padding: 16px;
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+}
+body main figure img {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  z-index: -2;
+}
+body main section.generated-code {
+  display: none;
+}
+body main section.generated-code header figure img {
+  margin: 30px;
+  left: 0;
+  top: 0;
+}
+body main section.generated-code section {
+  margin: 15% auto;
+}
+body main section.generated-code section .generated-img {
+  background-color: rgba(54, 98, 227, 0.17);
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+body main section.generated-code section .generated-img img {
+  display: none;
+  background-color: #f2f5f9;
+  border-radius: 12px;
+  position: relative;
+  top: 40px;
+  left: 40px;
+  padding: 20px;
+  height: 220px;
+  width: 220px;
+}
+body main section.generated-code section .bg-image {
+  z-index: -2;
+}
+body main section.generated-code footer .buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+body main section.generated-code footer .buttons button {
+  background-color: #3662e3;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  color: #f2f5f9;
+  padding: 15px;
+}
+body main section.generated-code footer .buttons button span {
+  margin-left: 10px;
+}/*# sourceMappingURL=index.css.map */

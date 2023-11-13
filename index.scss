@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&family=Quicksand&display=swap');
+
+$starch: #f2f5f9;
+$royalblue: #3662e3;
+$dark-bg: #111729;
+$greyscale: #364153;
+
+@mixin tablet {
+    @media (max-width: 600px) {
+      @content;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Outfit', 'Quicksand', 'Georgia', sans-serif;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $dark-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+
+    main {
+
+        form {
+            margin: 20px;
+            position: relative;
+            display: inline-block;
+            max-width: 70%;
+            width: 80vw;
+
+            @include tablet {
+                margin: 10% auto;
+                max-width: 100%;
+                width: 100vw;
+            }
+        
+            input {
+                background-color: rgba(0, 0, 0, 0.7);
+                border-radius: 16px;
+                border: 2px solid $royalblue;
+                color: $starch;
+                padding: 20px;
+                width: 100%;
+                box-sizing: border-box;
+        
+                &::placeholder {
+                    color: $greyscale;
+                }
+
+                &:focus {
+                    outline: inherit;
+                    box-shadow: rgba(131, 113, 113, 0.24) 0px 3px 8px;
+                }
+            }
+        
+            button {
+                background-color: $royalblue;
+                border-radius: 12px;
+                border: none;
+                color: $starch;
+                cursor: pointer;
+                margin-right: 1.5px;
+                padding: 16px;
+                position: absolute;
+                top: 50%;
+                right: 4px;
+                transform: translateY(-50%);
+            }
+        }
+
+        figure {
+            img {
+                position: absolute;
+                top: 20%;
+                right: 0;
+                z-index: -2;
+            }
+        }  
+
+        section.generated-code {
+            display: none;
+
+            header {
+                figure {
+                    img {
+                        margin: 30px;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+            }
+    
+            section {
+                margin: 15% auto;
+    
+                .generated-img {
+                    background-color: rgba(54, 98, 227, 0.17);
+                    border-radius: 50%;
+                    height: 300px;
+                    width: 300px;
+                    position: relative;
+                              
+                    img {
+                        display: none;
+                        background-color: $starch;
+                        border-radius: 12px;
+                        position: relative;
+                        top: 40px;;
+                        left: 40px;
+                        padding: 20px;
+                        height: 220px;
+                        width: 220px;
+                    }
+                }
+    
+                .bg-image {
+                    z-index: -2;
+                }
+            }
+    
+            footer {
+                .buttons {
+                    display: flex;
+                    justify-content: space-evenly;
+    
+                    button {
+                        background-color: $royalblue;
+                        border-radius: 12px;
+                        border: none;
+                        cursor: pointer;
+                        color: $starch;
+                        padding: 15px;
+    
+                        span {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
